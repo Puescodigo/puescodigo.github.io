@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'ink';
+    src: url(/assets/fonts/Inkfree.ttf);
+    font-weight: 400;
+}
 :root {
     --green-: #00B807;
     --white-: #FFFFFF;
     --light-: #F5F5F5;
     --gray-: #707070;
     --black-: #000000;
+
+    --font-ink-: 'ink';
 }
 * {
     margin: 0;
@@ -22,3 +29,81 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--light-);
 }
+
+
+
+/* ESTILOS DEVESTEVESON */
+.navContainer {
+    height: 6.4rem;
+    background-color: var(--white-);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 9.6rem;
+}
+.navLogo {
+    color: var(--green-);
+    font-size: 1.8rem;
+    padding: .8rem 1.6rem;
+    border: .2rem solid var(--green-);
+    border-radius: 3rem;
+}
+.navLink {
+    color: var(--black-);
+    font-size: 1.8rem;
+}
+
+
+.headerTitle {
+    color: var(--black-);
+    font-size: 8rem;
+    font-weight: 500;
+    max-width: 89.2rem;
+    text-align: center;
+    line-height: 110%;
+    margin: auto auto 9.6rem auto;
+}
+.headerTitle span {
+    color: var(--green-);
+}
+.headerBanner {
+    display: block;
+    width: 100%;
+    max-width: 128rem;
+    height: 60rem;
+    overflow: hidden;
+    border-radius: 6.4rem;
+    margin: auto auto 9.6rem auto;
+}
+.headerBanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutParagraph {
+    color: var(--black-);
+    font-size: 5.2rem;
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+    margin: auto auto 4.4rem auto;
+}
+.aboutParagraphOne {
+    max-width: 106.4rem;
+}
+.aboutParagraphTwo {
+    max-width: 107.3rem;
+}
+.aboutParagraphThree {
+    max-width: 110.5rem;
+}
+.aboutContainer span {
+    font-family: var(--font-ink-);
+}
+
+
+
+/* ESTILOS DE JHON */
