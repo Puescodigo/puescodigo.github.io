@@ -107,3 +107,75 @@ body {
 
 
 /* ESTILOS DE JHON */
+.equipo{
+    width: 138rem;
+    height: 120rem;
+    margin: 13.7rem auto 9.6rem auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tituloEquipo{
+    font-size: 5.2rem;
+    margin-bottom: 5.6rem;
+}
+
+.tituloEquipo span{
+    color: var(--green-);
+}
+
+swiper-container {
+    width: 91.5%;
+    height: 500px;
+}
+
+swiper-slide {
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+
+.buttonDonate{
+    font-size: 5.2rem;
+    color: var(--black-);
+    margin: 9.6rem auto;
+}
+
+.buttonDonate:hover {
+    color: var(--white-);
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    transition: text-shadow 0.4s ease-in-out;
+}
+
+.piePagina{
+    width: 84.6rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+
+.footerContainer {
+    height: 10rem;
+    background-color: var(--white-);
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContainer span {
+    color: var(--green-);
+}
