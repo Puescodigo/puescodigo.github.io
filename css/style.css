@@ -3,14 +3,15 @@
 :root {
     --green-: #00B807;
     --white-: #FFFFFF;
-    --light-: #F5F5F5;
-    --gray-: #707070;
-    --black-: #001000;
+    --black-: #0D0D0D;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
     
     list-style: none;
     text-decoration: none;
@@ -18,152 +19,114 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    background-color: var(--black-);
 }
 body {
-    font-family: 'Space Grotesk', sans-serif;
-    background-color: var(--white-);
-}
-
-
-
-/* ESTILOS DEVESTEVESON */
-.navLogo {
-    color: var(--green-);
-    font-size: 1.8rem;
-    padding: .8rem 1.6rem;
-    border: .2rem solid var(--green-);
-    border-radius: 3rem;
-    max-width: fit-content;
-    background-color: #abffae;
-    position: fixed;
-    top: 4rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-}
-.navLink {
-    color: var(--black-);
-    font-size: 1.8rem;
-}
-
-
-.headerTitle {
-    color: var(--black-);
-    font-size: 8rem;
-    font-weight: 500;
-    max-width: 89.2rem;
-    text-align: center;
-    line-height: 110%;
-    margin: 13.6rem auto 9.6rem auto;
-}
-.headerTitle span {
-    color: var(--green-);
-}
-.headerBanner {
-    display: block;
-    width: 100%;
-    max-width: 128rem;
-    height: 60rem;
-    overflow: hidden;
-    border-radius: 6.4rem;
-    margin: auto auto 9.6rem auto;
-}
-.headerBanner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.aboutParagraph {
-    color: var(--black-);
-    font-size: 5.2rem;
-    font-weight: 400;
-    line-height: 110%;
-    text-align: center;
-    margin: auto auto 4.8rem auto;
-}
-.aboutParagraphOne {
-    max-width: 106.4rem;
-}
-.aboutParagraphTwo {
-    max-width: 107.3rem;
-}
-.aboutParagraphThree {
-    max-width: 110.5rem;
-}
-
-
-
-/* ESTILOS DE JHON */
-.equipo{
-    width: 138rem;
-    height: 120rem;
-    margin: 13.7rem auto 9.6rem auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.tituloEquipo{
-    font-size: 5.2rem;
-    margin-bottom: 5.6rem;
-}
-
-.tituloEquipo span{
-    color: var(--green-);
-}
-
-swiper-container {
-    width: 91.5%;
-    height: 500px;
-}
-
-swiper-slide {
-    font-size: 18px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-swiper-slide img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    border-radius: 3rem;
-}
-
-.buttonDonate{
-    font-size: 5.2rem;
-    color: var(--black-);
-    margin: 9.6rem auto;
-}
-
-.buttonDonate:hover {
     color: var(--white-);
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
-    transition: text-shadow 0.4s ease-in-out;
+    overscroll-behavior: none;
+}
+.line_container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 1440px;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.separator {
+    position: absolute;
+    width: 1px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.separator:nth-child(1) {
+    left: 25%;
+}
+.separator:nth-child(2) {
+    left: 50%;
+}
+.separator:nth-child(3) {
+    left: 75%;
 }
 
-.piePagina{
-    width: 84.6rem;
-    height: 30rem;
-    object-fit: cover;
-    border-radius: 3rem;
-}
 
-.footerContainer {
-    height: 10rem;
-    background-color: var(--white-);
-    font-size: 1.8rem;
+
+
+
+.nav__container {
+    width: 100%;
+    height: 104px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 128px;
 }
 
-.footerContainer span {
+.nav__logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: .8rem 1.6rem;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+
+.hero__title {
+    overflow: hidden;
+}
+.hero__title__header {
+    font-size: clamp(2rem, 14cqi, 20rem);
+    font-weight: 700;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 1;
     color: var(--green-);
 }
+.hero__subtitle {
+    display: flex;
+    max-width: max-content;
+    margin-left: 27%;
+    margin-top: 80px;
+}
+.hero__subtitle__header {
+    font-size: clamp(2.5rem, 4cqi, 8rem);
+    font-weight: 500;
+    line-height: 1.1;
+}
+.hero__image {
+    width: 90%;
+    max-width: 1280px;
+    height: 600px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 128px;
+}
+.hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* .char {
+    transform: translateY(115px);
+    transition: transform .5s;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS JHON */
