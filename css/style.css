@@ -187,21 +187,20 @@ body {
     margin-top: 18.4rem;
 }
 .team__subtitle{
-    font-size: clamp(6.4rem, 4cqi, 8rem);
+    font-size: clamp(5rem, 4cqi, 6rem);
     font-weight: 700;
     line-height: 1.1;
 }
 .team__subtitle span{
-    font-size: clamp(6.4rem, 4cqi, 8rem);
     font-weight: 700;
     line-height: 1.1;
-    color: var(--green-);
+    color: var(--grey-);
 }
 swiper-container {
     width: 130.2rem;
     height: 40.8rem;
     margin-top: 4.8rem;
-    margin-left: 120px;
+    margin-left: 90px;
 }
 swiper-slide {
     text-align: center;
@@ -219,18 +218,20 @@ swiper-slide img {
 }
 .footer__container{
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 87.6rem;
-    height: 21.6rem;
-    margin: 18.4rem 28.6rem;
+    justify-content: space-evenly;
+    width: 80%;
+    height: auto;
+    margin: 18.4rem auto 18.4rem auto;
+
+}
+.footer__title{
+    font-size: clamp(3.6rem, 4cqi, 3.6rem);
 }
 .footer__title span{
-    font-size: clamp(3.6rem, 4cqi, 3.6rem);
     font-weight: 700;
     color: var(--green-);
-    margin-right: 5rem;
-    margin-left: 7rem;
+    margin-left: -1rem;
+    margin-right: -10rem;
 }
 .footer__contac a{
     display: flex;
@@ -247,6 +248,7 @@ swiper-slide img {
     background-repeat: no-repeat;
     background-size: 0% 2px;
     transition: background-size .3s;
+    max-width: max-content;
 }
 .footer__list a:hover, a:focus {
     background-size: 100% 2px;
@@ -267,7 +269,9 @@ swiper-slide img:hover{
     margin-left: -2rem;
 }
 
+@media(max-width: 480px){
+    .team__title{
+        margin:0;
+    }
 
-
-
-
+}

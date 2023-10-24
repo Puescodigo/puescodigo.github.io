@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>puescódigo</title>
 </head>
+
 <body>
 
     <!-- SEPARADORES -->
@@ -27,7 +29,8 @@
 
         <nav class="navbar">
             <div class="nav__container">
-                <a href="/" class="nav__logo" data-aos="zoom-in" data-aos-duration="800" data-value="PUESCÓDIGO">PUESCÓDIGO</a>
+                <a href="/" class="nav__logo" data-aos="zoom-in" data-aos-duration="800"
+                    data-value="PUESCÓDIGO">PUESCÓDIGO</a>
             </div>
         </nav>
 
@@ -37,7 +40,8 @@
                     <h1 class="hero__title__header"><span class="espa">PUESCÓDIGO</span></h1>
                 </div>
                 <div class="hero__subtitle" data-aos="fade-up" data-aos-duration="1200">
-                    <h2 class="hero__subtitle__header text2"> JOVENES APASIONADOS <br> POR LA <span>PROGRAMACIÓN</span></h2>
+                    <h2 class="hero__subtitle__header text2"> JOVENES APASIONADOS <br> POR LA <span>PROGRAMACIÓN</span>
+                    </h2>
                 </div>
                 <div class="hero__image" data-aos="zoom-in" data-aos-duration="800">
                     <img src="./assets/images/banner.jpg" alt="">
@@ -50,15 +54,18 @@
                 <div class="about__text">
 
                     <p class="about__paragraph__one about__paragraph" data-aos="fade-up" data-aos-duration="800">
-                        Queremos <span>parchar y aprender a programar</span> para contribuir a la creación de productos y servicios digitales.
+                        Queremos <span>parchar y aprender a programar</span> para contribuir a la creación de productos
+                        y servicios digitales.
                     </p>
 
                     <p class="about__paragraph__two about__paragraph" data-aos="fade-up" data-aos-duration="900">
-                        Estamos entusiasmados de utilizar nuestras habilidades para <span>resolver problemas</span> y crear nuevas oportunidades.
+                        Estamos entusiasmados de utilizar nuestras habilidades para <span>resolver problemas</span> y
+                        crear nuevas oportunidades.
                     </p>
 
                     <p class="about__paragraph__three about__paragraph" data-aos="fade-up" data-aos-duration="1000">
-                        Creemos que el código es una herramienta poderosa que puede usarse para <span>hacer del mundo un lugar mejor</span>.
+                        Creemos que el código es una herramienta poderosa que puede usarse para <span>hacer del mundo un
+                            lugar mejor</span>.
                     </p>
 
                 </div>
@@ -75,20 +82,43 @@
                 <div class="team__title">
                     <h2 class="team__subtitle"><span> EQUIPO </span><br> PUESCÓDIGO</h2>
                 </div>
-                <swiper-container class="mySwiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" 
-                loop="true" navigation="true" space-between="30" centered-slides="false" autoplay-delay="2000" 
-                autoplay-disable-on-interaction="false" slides-per-view="3">
-                    <swiper-slide class=".swiper-slide"><img src="./assets/images/photo-1.jpg" alt=""></swiper-slide>
-                    <swiper-slide class=".swiper-slide"><img src="./assets/images/photo-2.jpg" alt=""></swiper-slide>
-                    <swiper-slide class=".swiper-slide"><img src="./assets/images/photo-3.jpg" alt=""></swiper-slide>
-                    <swiper-slide class=".swiper-slide"><img src="./assets/images/photo-1.jpg" alt=""></swiper-slide>
-                    <swiper-slide class=".swiper-slide"><img src="./assets/images/photo-2.jpg" alt=""></swiper-slide>
-                    <swiper-slide class=".swiper-slide"><img src="./assets/images/photo-3.jpg" alt=""></swiper-slide>
-                    <swiper-slide class=".swiper-slide"><img src="./assets/images/photo-1.jpg" alt=""></swiper-slide>
-                    <swiper-slide class=".swiper-slide"><img src="./assets/images/photo-2.jpg" alt=""></swiper-slide>
-                    <swiper-slide class=".swiper-slide"><img src="./assets/images/photo-3.jpg" alt=""></swiper-slide>
+                <swiper-container class="mySwiper"
+                    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" loop="true"
+                    navigation="true" space-between="30" centered-slides="false" autoplay-delay="2000"
+                    autoplay-disable-on-interaction="false" slides-per-view="3">
+                    <swiper-slide data-aos="zoom-in" data-aos-duration="800" class=".swiper-slide"><img
+                            src="./assets/images/photo-1.jpg" alt=""></swiper-slide>
+                    <swiper-slide data-aos="zoom-in" data-aos-duration="900" class=".swiper-slide"><img
+                            src="./assets/images/photo-2.jpg" alt=""></swiper-slide>
+                    <swiper-slide data-aos="zoom-in" data-aos-duration="1000" class=".swiper-slide"><img
+                            src="./assets/images/photo-3.jpg" alt=""></swiper-slide>
                 </swiper-container>
             </div>
+            <script>
+                const swiperEl = document.querySelector('swiper-container')
+                Object.assign(swiperEl, {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    pagination: {
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        480: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 50,
+                        },
+                    },
+                });
+                swiperEl.initialize();
+            </script>
         </section>
         <section>
             <div class="footer__container">
@@ -128,22 +158,23 @@
 
 
 
-    
 
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-<!-- SWIPER JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 
-<!-- JavaScript -->
-<script src="js/main.js"></script> 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>
