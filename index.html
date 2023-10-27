@@ -84,40 +84,62 @@
                 </div>
                 <swiper-container class="mySwiper"
                     style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" loop="true"
-                    navigation="true" space-between="30" centered-slides="false" autoplay-delay="2000"
-                    autoplay-disable-on-interaction="false" slides-per-view="3">
+                    navigation="true" space-between="30" centered-slides="false" autoplay="true" autoplay-delay="2000"
+                    autoplay-disable-on-interaction="false" slides-per-view="3" pagination="false"
+                    mobile-slide-per-view="1">
                     <swiper-slide data-aos="zoom-in" data-aos-duration="800" class=".swiper-slide"><img
-                            src="./assets/images/photo-1.jpg" alt=""></swiper-slide>
+                            src="./assets/images/photo-1.jpg" class="team__card__img" alt="">
+                        <div class="team__card">
+                            <h1 class="team__name">devestevenson</h1>
+                            <button class="team__info">+</button>
+                        </div>
+                    </swiper-slide>
                     <swiper-slide data-aos="zoom-in" data-aos-duration="900" class=".swiper-slide"><img
-                            src="./assets/images/photo-2.jpg" alt=""></swiper-slide>
+                            src="./assets/images/photo-2.jpg" alt="">
+                        <div class="team__card">
+                            <h1 class="team__name">padierna</h1>
+                            <button class="team__info">+</button>
+                        </div>
+                    </swiper-slide>
                     <swiper-slide data-aos="zoom-in" data-aos-duration="1000" class=".swiper-slide"><img
-                            src="./assets/images/photo-3.jpg" alt=""></swiper-slide>
+                            src="./assets/images/photo-3.jpg" alt="">
+                        <div class="team__card">
+                            <h1 class="team__name">mishell</h1>
+                            <button class="team__info">+</button>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide data-aos="zoom-in" data-aos-duration="800" class=".swiper-slide"><img
+                            src="./assets/images/photo-1.jpg" class="team__card__img" alt="">
+                        <div class="team__card">
+                            <h1 class="team__name">devestevenson</h1>
+                            <button class="team__info">+</button>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide data-aos="zoom-in" data-aos-duration="900" class=".swiper-slide"><img
+                            src="./assets/images/photo-2.jpg" alt="">
+                        <div class="team__card">
+                            <h1 class="team__name">padierna</h1>
+                            <button class="team__info">+</button>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide data-aos="zoom-in" data-aos-duration="1000" class=".swiper-slide"><img
+                            src="./assets/images/photo-3.jpg" alt="">
+                        <div class="team__card">
+                            <h1 class="team__name">mishell</h1>
+                            <button class="team__info">+</button>
+                        </div>
+                    </swiper-slide>
                 </swiper-container>
             </div>
             <script>
-                const swiperEl = document.querySelector('swiper-container')
-                Object.assign(swiperEl, {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    pagination: {
-                        clickable: true,
-                    },
-                    breakpoints: {
-                        480: {
-                            slidesPerView: 1,
-                            spaceBetween: 20,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 40,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 50,
-                        },
-                    },
+                const swiperEl = document.querySelector('swiper-container');
+                const buttonEl = document.querySelector('button');
+                buttonEl.addEventListener('click', () => {
+                  // if it was initialized with attributes
+                swiperEl.setAttribute('slides-per-view', '3');
+                  // or if it was initialized with props
+                swiperEl.slidesPerView = 3;
                 });
-                swiperEl.initialize();
             </script>
         </section>
         <section>
