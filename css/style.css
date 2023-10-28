@@ -197,7 +197,8 @@ body {
     color: var(--grey-);
 }
 swiper-container {
-    width: 130.2rem;
+    max-width: 130.2rem;
+    width: 100%;
     height: 40.8rem;
     margin-top: 4.8rem;
     margin-left: 90px;
@@ -210,11 +211,11 @@ swiper-slide {
 }
 swiper-slide img {
     width: 100%;
+    max-width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
     position: relative;
-    /* filter: grayscale(1.1); */
     overflow: hidden;
 }
 .team__card{
@@ -223,11 +224,11 @@ swiper-slide img {
     top: 100%;
     right: 0;
     position: absolute;
-    backdrop-filter: blur();
+    backdrop-filter: blur(0);
     padding: 3rem;
     color: var(--black-);
     display: flex;
-    justify-content: space-evenly;
+    gap: .8rem;
     align-items: end;
 }
 swiper-slide:hover .team__card {
@@ -241,6 +242,11 @@ swiper-slide:hover .team__card {
     background: var(--white-);
     height: 3.7rem;
     width: 20.8rem;
+    max-width: max-content;
+    padding: 0px 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .team__info{
     color: var(--black-);
@@ -252,6 +258,16 @@ swiper-slide:hover .team__card {
     cursor: pointer;
     height: 3.7rem;
 }
+.team__profile{
+    color: var(--green-);
+    position: absolute;
+    font-size: clamp(3.6rem, 4cqi, 3.6rem);
+    font-weight: 400;
+    display: none;
+    line-height: 1.4;
+    margin-top: 30rem;
+    margin-left: -2rem;
+}
 .footer__container{
     display: flex;
     justify-content: space-evenly;
@@ -260,11 +276,9 @@ swiper-slide:hover .team__card {
     margin: 18.4rem auto 18.4rem auto;
 
 }
-.footer__title{
-    font-size: clamp(3.6rem, 4cqi, 3.6rem);
-}
 .footer__title span{
     font-weight: 700;
+    font-size: clamp(3rem, 4cqi, 3.6rem);
     color: var(--green-);
     margin-left: -1rem;
     margin-right: -10rem;
@@ -272,7 +286,7 @@ swiper-slide:hover .team__card {
 .footer__contac a{
     display: flex;
     flex-direction: column;
-    font-size: clamp(3.6rem, 4cqi, 3.6rem);
+    font-size: clamp(3rem, 4cqi, 3.6rem);
     font-weight: 400;
     line-height: 1.4;
     color: var(--white-);
@@ -289,19 +303,19 @@ swiper-slide:hover .team__card {
 .footer__list a:hover, a:focus {
     background-size: 100% 2px;
 }
-.team__profile{
-    color: var(--green-);
-    position: absolute;
-    font-size: clamp(3.6rem, 4cqi, 3.6rem);
-    font-weight: 400;
-    display: none;
-    line-height: 1.4;
-    margin-top: 30rem;
-    margin-left: -2rem;
-}
 @media screen and (max-width: 480px){
     .team__title{
         margin:0;
     }
-
+    swiper-container {
+        margin-left: 0rem;
+    }
+    .footer__container{
+        display: flex;
+        flex-direction: column;
+        margin: 18.4rem auto 15.4rem 1rem;
+    }
+    .footer__contac{
+        margin-top: 2rem;
+    }
 }
