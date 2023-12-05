@@ -26,6 +26,8 @@ body {
     color: var(--white-);
     overscroll-behavior: none;
     padding: 0 2.4rem;
+    width: 100%;
+    height: 100vh;
 }
 /* ----- NO TOCAR ----- */
 .line_container {
@@ -59,28 +61,36 @@ body {
 
 
 
-/* NAV */
-.nav__container {
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+
+
+.nav {
     width: 100%;
-    height: 10.9rem;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10.4rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-
-/* NAV LOGO */
-.nav__logo {
-    color: white;
+.logo {
+    color: var(--green-);
     font-size: 1.8rem;
     font-weight: 600;
     padding: .8rem 1.6rem;
-    border: .2rem solid var(--white-);
+    border: .3rem solid var(--green-);
     border-radius: 3rem;
+    background-color: var(--black-);
 }
 
-/* HERO */
 .hero__title {
     overflow: hidden;
 }
@@ -89,233 +99,42 @@ body {
     text-align: center;
     line-height: 1;
     color: var(--white-);
-    margin-bottom: 4rem;
 }
 .hero__title__header span {
     font-weight: 700;
     display: inline-block;
     transform: translateY(120%);
 }
+
 .hero__subtitle {
     display: flex;
     justify-content: center;
 }
 .hero__subtitle__header {
-    font-size: clamp(2.4rem, 4cqi, 8rem);
+    font-size: clamp(2.4rem, 3cqi, 6rem);
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: 12.8rem;
     color: var(--white-);
 }
 .hero__subtitle__header span {
     color: var(--green-);
     font-weight: 600;
 }
-.hero__image {
+
+
+
+.footer {
     width: 100%;
-    max-width: 1280px;
-    height: 600px;
-    overflow: hidden;
-    margin: auto;
-}
-.hero__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ABOUT TEXT */
-.about__container {
-    display: flex;
-    justify-content: center;
-    margin: 18.4rem 0;
-}
-.about__paragraph {
-    color: var(--white-);
-    font-size: clamp(2.4rem, 2.3cqi, 8rem);
-    text-transform: uppercase;
-    font-weight: 400;
-    text-align: center;
-}
-.about__paragraph__one {
-    max-width: 84rem;
-}
-.about__paragraph__two {
-    max-width: 87rem;
-    margin: 3.2rem 0;
-}
-.about__paragraph__three {
-    max-width: 82rem;
-}
-.about__paragraph span {
-    color: var(--green-);
-    font-weight: 600;
-}
-
-
-
-/* responsive */
-@media(max-width: 480px) {
-    .nav__container {
-        margin-bottom: 6.4rem;
-    }
-    .hero__title__header {
-        margin-bottom: 2.4rem;
-    }
-    .hero__subtitle__header {
-        margin-bottom: 7.2rem;
-    }
-    .about__container {
-        margin: 16.8rem 0;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/* ESTILOS JHON */
-.team__title {
-    display: flex;
-    max-width: max-content;
-    margin-left: 51%;
-    margin-top: 18.4rem;
-}
-.team__subtitle{
-    font-size: clamp(5rem, 4cqi, 6rem);
-    font-weight: 700;
-    line-height: 1.1;
-}
-.team__subtitle span{
-    font-weight: 700;
-    line-height: 1.1;
-    color: var(--grey-);
-}
-swiper-container {
-    max-width: 130.2rem;
-    width: 100%;
-    height: 40.8rem;
-    margin-top: 4.8rem;
-    margin-left: 90px;
-}
-swiper-slide {
-    text-align: center;
+    height: 96px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-swiper-slide img {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    position: relative;
-    overflow: hidden;
-}
-.team__card{
-    width: 100%;
-    height: 100%;
-    top: 100%;
-    right: 0;
-    position: absolute;
-    backdrop-filter: blur(0);
-    padding: 3rem;
-    color: var(--black-);
-    display: flex;
-    gap: .8rem;
-    align-items: end;
-}
-swiper-slide:hover .team__card {
-    top: 0;
-    filter: grayscale(1);
-    transition: top .1s;
-}
-.team__name{
-    text-transform: uppercase;
-    font-size: 2.4rem;
-    background: var(--white-);
-    height: 3.7rem;
-    width: 20.8rem;
-    max-width: max-content;
-    padding: 0px 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.team__info{
-    color: var(--black-);
-    background: var(--white-);
-    font-size: 2.7rem;
-    padding: 0rem 2rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    height: 3.7rem;
-}
-.team__profile{
-    color: var(--green-);
-    position: absolute;
-    font-size: clamp(3.6rem, 4cqi, 3.6rem);
-    font-weight: 400;
-    display: none;
-    line-height: 1.4;
-    margin-top: 30rem;
-    margin-left: -2rem;
-}
-.footer__container{
-    display: flex;
-    justify-content: space-evenly;
-    width: 80%;
-    height: auto;
-    margin: 18.4rem auto 18.4rem auto;
-
-}
-.footer__title span{
-    font-weight: 700;
-    font-size: clamp(3rem, 4cqi, 3.6rem);
-    color: var(--green-);
-    margin-left: -1rem;
-    margin-right: -10rem;
-}
-.footer__contac a{
-    display: flex;
-    flex-direction: column;
-    font-size: clamp(3rem, 4cqi, 3.6rem);
-    font-weight: 400;
-    line-height: 1.4;
+.proximamente {
     color: var(--white-);
-}
-.footer__list a {
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-    max-width: max-content;
-}
-.footer__list a:hover, a:focus {
-    background-size: 100% 2px;
-}
-@media screen and (max-width: 480px){
-    .team__title{
-        margin:0;
-    }
-    swiper-container {
-        margin-left: 0rem;
-    }
-    .footer__container{
-        display: flex;
-        flex-direction: column;
-        margin: 18.4rem auto 15.4rem 1rem;
-    }
-    .footer__contac{
-        margin-top: 2rem;
-    }
+    font-size: 1.8rem;
+    padding: .8rem 1.6rem;
+    border-bottom: .1rem solid var(--white-);
+    border-radius: 1rem;
+    background-color: var(--black-);
 }
