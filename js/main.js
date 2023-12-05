@@ -27,7 +27,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
 
-document.querySelector(".nav__logo").onmouseover = event => {  
+document.querySelector(".logo").onmouseover = event => {  
   let iteration = 0;
   
   clearInterval(interval);
