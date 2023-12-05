@@ -187,21 +187,21 @@ body {
     margin-top: 18.4rem;
 }
 .team__subtitle{
-    font-size: clamp(6.4rem, 4cqi, 8rem);
+    font-size: clamp(5rem, 4cqi, 6rem);
     font-weight: 700;
     line-height: 1.1;
 }
 .team__subtitle span{
-    font-size: clamp(6.4rem, 4cqi, 8rem);
     font-weight: 700;
     line-height: 1.1;
-    color: var(--green-);
+    color: var(--grey-);
 }
 swiper-container {
-    width: 130.2rem;
+    max-width: 130.2rem;
+    width: 100%;
     height: 40.8rem;
     margin-top: 4.8rem;
-    margin-left: 120px;
+    margin-left: 90px;
 }
 swiper-slide {
     text-align: center;
@@ -211,50 +211,52 @@ swiper-slide {
 }
 swiper-slide img {
     width: 100%;
+    max-width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
     position: relative;
-    filter: grayscale(1.1);
+    overflow: hidden;
 }
-.footer__container{
+.team__card{
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    right: 0;
+    position: absolute;
+    backdrop-filter: blur(0);
+    padding: 3rem;
+    color: var(--black-);
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 87.6rem;
-    height: 21.6rem;
-    margin: 18.4rem 28.6rem;
+    gap: .8rem;
+    align-items: end;
 }
-.footer__title span{
-    font-size: clamp(3.6rem, 4cqi, 3.6rem);
-    font-weight: 700;
-    color: var(--green-);
-    margin-right: 5rem;
-    margin-left: 7rem;
+swiper-slide:hover .team__card {
+    top: 0;
+    filter: grayscale(1);
+    transition: top .1s;
 }
-.footer__contac a{
+.team__name{
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    background: var(--white-);
+    height: 3.7rem;
+    width: 20.8rem;
+    max-width: max-content;
+    padding: 0px 1rem;
     display: flex;
-    flex-direction: column;
-    font-size: clamp(3.6rem, 4cqi, 3.6rem);
-    font-weight: 400;
-    line-height: 1.4;
-    color: var(--white-);
+    align-items: center;
+    justify-content: center;
 }
-.footer__list a {
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-}
-.footer__list a:hover, a:focus {
-    background-size: 100% 2px;
-}
-swiper-slide img:hover{
-    filter: grayscale(0);
-    transition: filter .2s;
-    opacity: 1;
+.team__info{
+    color: var(--black-);
+    background: var(--white-);
+    font-size: 2.7rem;
+    padding: 0rem 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 3.7rem;
 }
 .team__profile{
     color: var(--green-);
@@ -266,8 +268,54 @@ swiper-slide img:hover{
     margin-top: 30rem;
     margin-left: -2rem;
 }
+.footer__container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    height: auto;
+    margin: 18.4rem auto 18.4rem auto;
 
-
-
-
-
+}
+.footer__title span{
+    font-weight: 700;
+    font-size: clamp(3rem, 4cqi, 3.6rem);
+    color: var(--green-);
+    margin-left: -1rem;
+    margin-right: -10rem;
+}
+.footer__contac a{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(3rem, 4cqi, 3.6rem);
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--white-);
+}
+.footer__list a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    max-width: max-content;
+}
+.footer__list a:hover, a:focus {
+    background-size: 100% 2px;
+}
+@media screen and (max-width: 480px){
+    .team__title{
+        margin:0;
+    }
+    swiper-container {
+        margin-left: 0rem;
+    }
+    .footer__container{
+        display: flex;
+        flex-direction: column;
+        margin: 18.4rem auto 15.4rem 1rem;
+    }
+    .footer__contac{
+        margin-top: 2rem;
+    }
+}
